@@ -7,9 +7,8 @@
 
    ClapTrap::ClapTrap(std::string Name) :_Name(Name) , _AttackDamage(0) , _EnergyPoints(10) , _Hintpoints(10)
    {
-      std::cout << "CLapTrap " << this->_Name << " contractor is created" << std::endl;
+      std::cout << "CLapTrap " << this->_Name << " contractor is created " << std::endl;
    }
-
 
     ClapTrap::~ClapTrap()
     {
@@ -47,7 +46,7 @@
     }
     void ClapTrap::takeDamage(unsigned int amount)
     {
-            if(this->_Hintpoints > amount)
+            if((unsigned)this->_Hintpoints > amount)
                 this->_Hintpoints -= amount; 
             else    
                  this->_Hintpoints = 0;  // more logical not be nagative points

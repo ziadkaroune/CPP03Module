@@ -6,15 +6,16 @@ class ClapTrap
 {
     protected:
        std::string _Name;
-       int _Hintpoints;
-       int _EnergyPoints;
        int _AttackDamage;
+       int _EnergyPoints;
+       int _Hintpoints;
     public:
     ClapTrap(); // constructor
     ClapTrap(std::string Name); 
     ClapTrap(const ClapTrap &copy); // copy constructor
     ClapTrap& operator=(const ClapTrap &copy); //copy assignment operator
-    virtual ~ClapTrap(); // desconstrcutor
+    ~ClapTrap(); // desconstrcutor
+
     void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);

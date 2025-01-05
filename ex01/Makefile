@@ -9,7 +9,8 @@ all		:	$(NAME)
 
 $(NAME)	:	$(OBJCS)
 			$(CPP) $(CPFLAGS) $(OBJCS) -o $(NAME)
-
+%.o:%.cpp
+			$(CPP) $(CPFLAGS) -c $< -o $@
 clean	:	
 			$(RM) $(OBJCS)
 
